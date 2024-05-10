@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+const serverless = require('serverless-http');
 process.on("uncaughtException", (err) => {
   console.log(err.name, err.message);
   console.log("Uncaught Exception, Shutting down the server");
@@ -13,9 +14,7 @@ const DB = process.env.DATABASE.replace(
   process.env.PASSWORD
 ).replace("<USER>", process.env.USER);
 mongoose.connect(DB).then(() => console.log("Database Connected"));
-const server = app.listen(8000, () => {
-  console.log("Server Started");
-});
+const server = serverless(app);
 
 process.on("unhandledRejection", (err) => {
   console.log(err.name, err.message);
