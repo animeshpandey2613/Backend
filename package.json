@@ -2,7 +2,7 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "Backend for Burning Moon",
-  "main": "functions/app.js",
+  "main": "app.js",
   "scripts": {
     "build": "netlify deploy --prod"
   },
