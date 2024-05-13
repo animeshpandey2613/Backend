@@ -2,12 +2,9 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "Backend for Burning Moon",
-  "main": "app.js",
+  "main": "functions/app.js",
   "scripts": {
-    "start:prod": "set NODE_ENV=production && nodemon server.js",
-    "start:dev": "set NODE_ENV=development && nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "set NODE_ENV=production && netlify-deploy --prod"
+    "build": "netlify deploy --prod"
   },
   "repository": {
     "type": "git",
@@ -22,9 +19,9 @@
     "mongoose": "^8.3.4",
     "morgan": "^1.10.0",
     "netlify-cli": "^12.7.2",
+    "netlify-deploy": "^0.0.2",
     "netlify-lambda": "^2.0.16",
     "nodemailer": "^6.9.13",
-    "serverless-http": "^3.2.0",
     "validator": "^13.11.0"
   },
   "devDependencies": {
