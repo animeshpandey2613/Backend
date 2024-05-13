@@ -13,7 +13,7 @@ const handleExpiredToken = () => {
   return new AppError("Token Expired, Login Again!", 401);
 };
 const handleDuplicateError = (err) => {
-  const value = err.keyValue.phoneNumber;
+  const value = err.message;
   return new AppError(`User with phone number ${value} already exists`, 400);
 };
 const ProductionMessage = (err, res) => {
