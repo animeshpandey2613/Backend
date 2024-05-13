@@ -2,7 +2,6 @@
 base = “/”
 command = “echo Building Functions”
 functions = "functions"
-publish = “/dist”
 [[redirects]]
 force = true
 from = “/api/*”
