@@ -18,7 +18,7 @@ app.use("/movies", MovieRouter);
 app.use('/users', UserRouter);
 app.use('/movies', MovieRouter); 
 
-app.all("*", (req, res, next) => next(new AppError("Invalid Route", 404)));
+app.all("*", (req, res, next) => next(new AppError(`Invalid Route, route = ${req.path}`, 404)));
 app.use(ErrorController);
 
 module.exports = app;
