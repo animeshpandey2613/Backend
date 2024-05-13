@@ -1,9 +1,9 @@
 [build]
-base = “/”
-command = “echo Building Functions”
+base = "/"
+command = "echo Building Functions"
 functions = "functions"
 [[redirects]]
 force = true
-from = “/api/*”
+from = "/api/*"
 status = 200
-to = “/.netlify/functions/api/:splat”
+to = "/.netlify/functions/api/:splat"
