@@ -15,8 +15,8 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use("/users", UserRouter);
 app.use("/movies", MovieRouter);
-app.use('/.netlify/functions/api/users', UserRouter);
-app.use('/.netlify/functions/api/movies', MovieRouter); 
+app.use('/', UserRouter);
+app.use('/', MovieRouter); 
 
 app.all("*", (req, res, next) => next(new AppError("Invalid Route", 404)));
 app.use(ErrorController);
