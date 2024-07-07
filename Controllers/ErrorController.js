@@ -26,7 +26,7 @@ const ProductionMessage = (err, res) => {
   } else {
     res.status(500).send({
       status: "error",
-      message: "Something Went Wrong",
+      err,
     });
   }
 };
