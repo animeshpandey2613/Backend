@@ -6,6 +6,7 @@ router
   .route("/")
   .post(MovieController.InsertMovie)
   .get(userController.Protect, MovieController.GetAllMovies);
-router.route("/:id").get(MovieController.GetSpecificMovie).post(InsertPotraitImage);
+router.route("/:id").get(MovieController.GetSpecificMovie)
+.post(MovieController.InsertPotraitImage);
 router.route("/watched/:phoneNumber").get(MovieController.GetUserWatchedMovies);
 module.exports = router;
