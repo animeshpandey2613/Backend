@@ -19,6 +19,10 @@ const movieSchema = new Mongoose.Schema({
     unique: [true, "This image is already used in a Movie"],
     type: String,
   },
+  potraitImage:{
+    type:String,
+    required:[true, "Potrait Image is required"],
+  },
   trailer: {
     type: String,
   },
