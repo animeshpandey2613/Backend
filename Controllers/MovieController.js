@@ -44,7 +44,7 @@ exports.GetUserWatchedMovies = catchAsyncError(async (req, res, next) => {
 });
 
 exports.InsertPotraitImage = catchAsyncError(async(req, res, next)=>{
-  const data = await movieModel.findOneAndUpdate({_id:req.params.id}, req.body, { new: true });
+  const data = await movieModel.findByIdAndUpdate(req.params.id, req.body, { new: true });
   res.send({
     status:"sucess",
     data,
